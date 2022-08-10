@@ -1,0 +1,8 @@
+body{
+    --dark_primary:  #494949;
+    background-color: var(--dark_primary);
+    background-image: url("../img/index_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}

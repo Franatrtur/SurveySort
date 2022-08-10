@@ -1,0 +1,37 @@
+body{
+
+}
+header{
+    display: flex;
+    --dark_secondary: #2D2D2D;
+    background-color: var(--dark_secondary);
+    vertical-align: middle;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    justify-content: space-between;
+}
+header img{
+    height: 10vh;
+}
+.header-left,.header-center,.header-right{
+    display: flex;
+}
+.header-left img{
+    filter: invert(1);
+    height: 5vh;
+    padding: 2.5vh;
+}
+header p{
+    margin-top: auto;
+    margin-bottom: auto;
+    color : #fff;
+}
+.tools{
+    background-color: #2D2D2D;
+    width: 2vw;
+    height: 11vh;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    border-radius: 0 1vh 0 0;
+}
