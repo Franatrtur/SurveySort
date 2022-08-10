@@ -24,7 +24,7 @@ async function makeRequest(requestType, method = "GET", parameters = {}){
 		})
 
 		if(!response.ok)
-			Fuck("Server backend responded with error code (internal server error)", true, response)
+			Fuck(`Server responded with error code: ${response.status} (${response.statusText})`, true, response)
 
 		answer = await response.json()
 	}
