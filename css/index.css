@@ -1,7 +1,8 @@
 body{
-
+    font-family: 'Montserrat', sans-serif;
 }
 header{
+    font-size: 1vw;
     display: flex;
     --dark_secondary: #2D2D2D;
     background-color: var(--dark_secondary);
@@ -10,8 +11,8 @@ header{
     width: 100%;
     justify-content: space-between;
 }
-header img{
-    height: 10vh;
+header > div{
+    margin: auto 0;
 }
 .header-left,.header-center,.header-right{
     display: flex;
@@ -21,11 +22,61 @@ header img{
     height: 5vh;
     padding: 2.5vh;
 }
+/* .right_white_border{
+    border-right: 3px solid #4588ba
+} */
+.white_line{
+    width: .1vw;
+    height: 5vh;
+    background-color: #cbcbcb;
+    margin: auto
+}
+.header-center{
+    padding-right: 20%;
+}
+.header-center img{
+    height: 8vh;
+    margin: auto .5vw auto auto;
+}
 header p{
     margin-top: auto;
     margin-bottom: auto;
     color : #fff;
 }
+.header-right > div{
+    margin-right: 1vw;
+    border-radius: .2vw;
+    padding: 1vh 1vw;
+    display: inherit;
+}
+.header-right #loginButton{
+    background-color: #cec777;
+}
+.header-right #loginButton > p{
+    font-weight: bolder;
+}
+.header-right #accountButton{
+    background-color: #a3a3a3;
+}
+.header-right > div > img{
+    height: 3vh;
+    margin-right: .5vw;
+}
+.header-right > div > p{
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--dark_secondary);
+}
+/* main-text */
+.main_text{
+    color: white;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    margin: auto;
+}
+
+/* tools (bottom left) */
 .tools{
     background-color: #2D2D2D;
     width: 2vw;
