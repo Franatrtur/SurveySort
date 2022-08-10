@@ -1,24 +1,57 @@
 
 const BACKEND_URL = "http://jaroto.pythonanywhere.com"
 
-function Error(message = "uncaught error"){
+function Fuck(message = "uncaught error", disrupt = false, info = {}){
+
 	console.error(message)
-	alert(message)
+	console.log(info)
+	alert("Oops! Something has gone wrong")
+
+	if(disrupt)
+		throw message
+}
+
+
+async function makeRequest(requestType, method = "GET", parameters = {}){
+
+	let answer
+
+	try{
+
+		let response = await fetch(BACKEND_URL + "/" + requestType, {
+			method,
+			...parameters
+		})
+
+		if(!response.ok)
+			Fuck("Server backend responded with error code (internal server error)", true, response)
+
+		answer = await response.json()
+	}
+	catch(error){
+
+		Fuck("Server request failed: " + error.message, true, error)
+	}
+
+	if("errorMessage" in answer)
+		Fuck("Server responded with an error message: " + answer.errorMessage)
+
+	return answer.result
 }
 
 async function sendMatch(winner_id, loser_id){
 
-	let response = await fetch(BACKEND_URL + "/match", {
-		method: "PUT",
+	return await makeRequest("match", "PUT", {
 		headers: {
 			"Content-Type": "application/json"
 		},
-		body: JSON.stringify( {winner_id, loser_id} )
+		body: JSON.stringify(
+			{winner_id, loser_id}
+		)
 	})
-
-	if(!response.ok)
-		Error("Response error code")
-
-	return await response.json()
 }
+
+
+
+
 
