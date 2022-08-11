@@ -65,7 +65,7 @@ async function drawResults(){
 	$("#results").html("")
 	let cont = ""
 
-	results.sort((itemA, itemB) => itemA.score - itemB.score)
+	results.sort((itemA, itemB) => itemB.elo - itemA.elo)
 
 	let maxelo = results[0].elo
 
