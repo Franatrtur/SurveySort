@@ -86,7 +86,10 @@ async function nextMatch(){
 
 	LOCKED = true
 
-	[ID1, ID2] = await loadMatch()
+	let ids = await loadMatch()
+
+	ID1 = ids[0]
+	ID2 = ids[1]
 
 	LOCKED = false
 }
