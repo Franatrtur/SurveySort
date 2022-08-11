@@ -51,6 +51,11 @@ async function sendMatch(winner_id, loser_id){
 	})
 }
 
+async function getMatch(){
+
+	return await makeRequest("match", "GET")
+}
+
 
 
 
