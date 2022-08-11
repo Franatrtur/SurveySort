@@ -1,6 +1,16 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 header{
     font-size: 1vw;
     display: flex;
@@ -65,24 +75,41 @@ header p{
 .header-right > div > p{
     margin-top: auto;
     margin-bottom: auto;
-    color: var(--dark_secondary);
+    color: #2D2D2D;
 }
 /* main-text */
 .main_text{
+    display: flex;
     color: white;
     position: fixed;
     top: 40%;
-    left: 40%;
-    margin: auto;
+    left: 20%;
+    width: 60%;
+    justify-content: space-between;
+    height: 50vh;
+}
+.main_right{
+    text-align: center;
+    background-color: #e2e2e2;
+    height: inherit;
+    color: #000;
+    padding: 0 6vw;
+    border-radius: .2vw;
 }
 
 /* tools (bottom left) */
 .tools{
-    background-color: #2D2D2D;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 2vw;
     height: 11vh;
     position: fixed;
     bottom: 0;
     color: white;
     border-radius: 0 1vh 0 0;
+}
+.tools img{
+    height: 4vh;
 }
