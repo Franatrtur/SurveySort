@@ -90,4 +90,9 @@
         flex-basis: auto;
         flex-grow: 0;
     }
+    #descriptionBottom{
+        top: 0;
+        bottom: unset;
+        border-radius: 6px 6px 0px 0px;
+    }
 }
