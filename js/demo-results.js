@@ -58,3 +58,34 @@ async function pullResults(){
 }
 
 
+async function drawResults(){
+
+	let results = await pullResults()
+
+	$("#results").html("")
+	let cont = ""
+
+	results.sort((itemA, itemB) => itemA.score - itemB.score)
+
+	let maxelo = results[0].elo
+
+	for(let i = 0; i < results.length; i++){
+
+		let item = results[i]
+
+		cont += `
+		<div class="item" id="item${item.id}">
+			<div class="item-content">
+				<div class="rank">${i+1}</div>
+				<div class="item-name">${item.name}</div>
+				<div class="score">${item.elo}</div>
+			</div>
+			<div class="line" style="width:${100*item.elo/maxelo}%"></div>
+		</div>
+		`
+	}
+
+	$("#results").html(cont)
+}
+drawResults()
+setInterval(() => drawResults(), 5000)
