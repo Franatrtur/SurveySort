@@ -1,9 +1,12 @@
 
 const BACKEND_URL = "http://jaroto.pythonanywhere.com"
 const ITEMS_DIR = "./items/"
-const LOADING_GIF = 
+const LOADING_GIF = "./img/loading.gif"
 
-const element = id => document.getElementById(id)
+var LOCKED = true
+var ID1, ID2
+
+toCSSurl = url => `url("${url}")`
 
 function Fuck(message = "uncaught error", disrupt = false, info = {}){
 
@@ -63,13 +66,39 @@ async function getMatch(){
 
 async function loadMatch(){
 
-	// element("image1").setAttribute("src", ITEMS_DIR + item1.source_file)
-	// element("image2").setAttribute("src", ITEMS_DIR + item2.source_file)
+	$("image1").css("background-image", toCSSurl(LOADING_GIF))
+	$("image2").css("background-image", toCSSurl(LOADING_GIF))
 
 	let [item1, item2] = await getMatch()
 
-	element("image1").setAttribute("src", ITEMS_DIR + item1.source_file)
-	element("image2").setAttribute("src", ITEMS_DIR + item2.source_file)
+	$("image1").css("background-image", toCSSurl(ITEMS_DIR + item1.source_file))
+	$("image2").css("background-image", toCSSurl(ITEMS_DIR + item2.source_file))
+
+	return [item1.id, item2.id]
 }
+
+
+async function nextMatch(){
+
+	LOCKED = true
+
+	[ID1, ID2] = await loadMatch()
+
+	LOCKED = false
+}
+
+function win(winnerId, loserId){
+
+	if(LOCKED)
+		return Fuck("Next match is still loading", false)
+
+	sendMatch(winnerId, loserId).then(nextMatch)//.catch(nextMatch)
+}
+
+$("image1").on("click", () => win(ID1, ID2))
+$("image2").on("click", () => win(ID2, ID1))
+
+setTimeout(nextMatch, 1000)
+
 
 
