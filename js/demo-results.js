@@ -87,5 +87,25 @@ async function drawResults(){
 
 	$("#results").html(cont)
 }
+
 drawResults()
-setInterval(() => drawResults(), 5000)
+
+var INTERVAL = setInterval(drawResults, 5000)
+
+function toggleInterval(){
+
+	if(INTERVAL){
+
+		clearInterval(INTERVAL)
+		INTERVAL = 0
+		$("#stop").addClass("go")
+		$("#stop").removeClass("stop")
+	}
+	else{
+		INTERVAL = setInterval(drawResults, 5000)
+		$("#stop").addClass("stop")
+		$("#stop").removeClass("go")
+	}
+}
+
+$("#stop").on("click", toggleInterval)

@@ -68,6 +68,37 @@
 }
 
 
+#stop{
+    padding: .5rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+#stop:hover{
+    transform: scale(1.05);
+    color: white;
+}
+#stop:active{
+    transform: scale(.95);
+    color: white;
+}
+#stop.stop{
+    background-color: rgba(255,0,0,0.7);
+}
+#stop.stop::after{
+    content: "Stop updating"
+}
+#stop.go{
+    background-color: rgba(0,255,0,0.7);
+}
+#stop.go::after{
+    content: "Restart updating"
+}
+
+
 /* .score::before{
     content: "";
     display: inline-block;

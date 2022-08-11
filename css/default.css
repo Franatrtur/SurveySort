@@ -8,6 +8,7 @@ body{
     background-image: url("../img/index_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     margin: 0;
     overflow-x: hidden;
 }
@@ -79,12 +80,12 @@ header > div{
 header p{
     margin-top: auto;
     margin-bottom: auto;
-    color : var(--fg-color);
+    color: var(--fg-color);
 }
 .header-right > div{
-    margin-right: 1vw;
-    border-radius: .2vw;
-    padding: 1vh 1vw;
+    margin-right: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem;
     display: inherit;
 }
 .header-right #loginButton{
