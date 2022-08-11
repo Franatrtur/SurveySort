@@ -1,5 +1,9 @@
 
 const BACKEND_URL = "http://jaroto.pythonanywhere.com"
+const ITEMS_DIR = "./items/"
+const LOADING_GIF = 
+
+const element = id => document.getElementById(id)
 
 function Fuck(message = "uncaught error", disrupt = false, info = {}){
 
@@ -57,6 +61,15 @@ async function getMatch(){
 }
 
 
+async function loadMatch(){
 
+	// element("image1").setAttribute("src", ITEMS_DIR + item1.source_file)
+	// element("image2").setAttribute("src", ITEMS_DIR + item2.source_file)
+
+	let [item1, item2] = await getMatch()
+
+	element("image1").setAttribute("src", ITEMS_DIR + item1.source_file)
+	element("image2").setAttribute("src", ITEMS_DIR + item2.source_file)
+}
 
 
