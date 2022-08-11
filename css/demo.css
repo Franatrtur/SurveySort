@@ -37,7 +37,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    
+
     text-align: center;
 
     background: rgba(0, 0, 0, 0.7);
@@ -60,7 +60,7 @@
 
     flex: 0.5;
 
-    
+    color: var(--fg-color);
 
     margin: 0;
 
