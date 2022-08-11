@@ -1,27 +1,4 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-button{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 2vh 4vw;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    border-radius: .5vh;
-}
-input{
-    border: none;
-    padding: 2vh 4vw;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-}
+
 /* main-text */
 .main_text{
     display: flex;
