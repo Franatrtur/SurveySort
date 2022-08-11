@@ -10,7 +10,7 @@
     width: 100vw;
     flex-direction: column;
     align-items: center;
-    padding-top: 4rem;
+    padding: 4rem 0;
 }
 
 .results .item {
@@ -53,15 +53,17 @@
 .item .line{
     height: 6px;
     /* width: 100%; */
+    box-shadow: 0 0 2px rgba(0,0,0,25%);
 }
 
 .item:nth-child(even) .line{
-    background-color: #22DBDB;
-
+    background-color: #1ec1c1;
+    box-shadow: 0 0 5px #1ec1c180;
 }
 
 .item:nth-child(odd) .line{
-    background-color: #F5ED11;
+    background-color: #cdc718;
+    box-shadow: 0 0 5px #cdc71880;
 
 }
 

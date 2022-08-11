@@ -9,6 +9,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
+    overflow-x: hidden;
 }
 
 button{
@@ -40,7 +41,7 @@ html{
     height: 100%;
 }
 header{
-    font-size: 1rem;
+    font-size: 1.2rem;
     display: flex;
     background-color: var(--bg2-color);
     vertical-align: middle;
@@ -72,7 +73,7 @@ header > div{
     padding-right: 4vw;
 }
 .header-center img{
-    height: 8vh;
+    height: 6vh;
     margin: auto .5vw auto auto;
 }
 header p{
