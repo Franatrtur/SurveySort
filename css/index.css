@@ -9,7 +9,8 @@ button{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
+    border-radius: .5vh;
 }
 input{
     border: none;
@@ -17,7 +18,7 @@ input{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -29,13 +30,10 @@ input{
     top: 30%;
     left: 20%;
     width: 60%;
-    justify-content: space-between;
-    height: 50vh;
 }
 .main_right{
     text-align: center;
     background-color: #e2e2e2;
-    height: inherit;
     color: #000;
     padding: 0 6vw;
     border-radius: .2vw;
@@ -43,3 +41,26 @@ input{
 .main_right > input{
     text-align: left;
 }
+.main_text > div > button{
+    margin-bottom: 1vh;
+}
+.main_left{
+    margin-right: 5vw;
+}
+.main_text > div > input, .main_text > div > button{
+    width: 19vw;
+    padding: 2vh .5vw;
+}
+.btnCreate{
+    background: linear-gradient(90deg, #15C69B 0%, #B0CA10 100%);
+    color: white;
+}
+.btnRespond{
+    background: #3db3b3;
+    color: white;
+}
+.btnNew{
+    background: #b0ab17;
+    color: #fff;
+}
+

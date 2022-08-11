@@ -1,7 +1,7 @@
 body{
     --dark_primary:  #494949;
     background-color: var(--dark_primary);
-    background-image: url("../img/index_bg.svg");   
+    background-image: url("../img/index_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -10,7 +10,7 @@ html{
     height: 100%;
 }
 header{
-    font-size: 1vw;
+    font-size: 1rem;
     display: flex;
     --dark_secondary: #2D2D2D;
     background-color: var(--dark_secondary);
@@ -40,7 +40,7 @@ header > div{
     margin: auto
 }
 .header-center{
-    padding-right: 20%;
+    padding-right: 4vw;
 }
 .header-center img{
     height: 8vh;
@@ -90,5 +90,13 @@ header p{
 }
 .tools img{
     height: 4vh;
+}
+@media (max-width:850px){
+    .header-left > div > p{
+        display: none;
+    }
+    .header-center > p{
+        display: none;
+    }
 }
 
