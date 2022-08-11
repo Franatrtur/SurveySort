@@ -66,13 +66,17 @@ async function getMatch(){
 
 async function loadMatch(){
 
-	$("image1").css("background-image", toCSSurl(LOADING_GIF))
-	$("image2").css("background-image", toCSSurl(LOADING_GIF))
+	$("#image1").css("background-image", toCSSurl(LOADING_GIF))
+	$("#image2").css("background-image", toCSSurl(LOADING_GIF))
+	$("#description1").text("loading...")
+	$("#description2").text("loading...")
 
 	let [item1, item2] = await getMatch()
 
-	$("image1").css("background-image", toCSSurl(ITEMS_DIR + item1.source_file))
-	$("image2").css("background-image", toCSSurl(ITEMS_DIR + item2.source_file))
+	$("#image1").css("background-image", toCSSurl(ITEMS_DIR + item1.source_file))
+	$("#image2").css("background-image", toCSSurl(ITEMS_DIR + item2.source_file))
+	$("#description1").text(item1.name)
+	$("#description2").text(item2.name)
 
 	return [item1.id, item2.id]
 }
@@ -95,8 +99,8 @@ function win(winnerId, loserId){
 	sendMatch(winnerId, loserId).then(nextMatch)//.catch(nextMatch)
 }
 
-$("image1").on("click", () => win(ID1, ID2))
-$("image2").on("click", () => win(ID2, ID1))
+$("#image1").on("click", () => win(ID1, ID2))
+$("#image2").on("click", () => win(ID2, ID1))
 
 setTimeout(nextMatch, 1000)
 

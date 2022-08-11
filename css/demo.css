@@ -40,6 +40,8 @@
 
     text-align: center;
 
+    font-size: 1.5rem;
+
     background: rgba(0, 0, 0, 0.7);
     color: white;
 
@@ -57,6 +59,7 @@
 .prompt {
     font-size: 2em;
     padding: 1em;
+    text-align: center;
 
     flex: 0.5;
 
