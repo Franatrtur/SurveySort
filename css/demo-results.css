@@ -3,33 +3,79 @@
 }
 .header-center{
     margin-left: 1vw;
+    font-size: 1.6rem;
 }
 .results{
-    display: flexbox;
+    display: flex;
     width: 100vw;
     flex-direction: column;
     align-items: center;
+    padding-top: 10rem
 }
 
 .results .item {
+    font-size: 1.6rem;
+    background-color: white;
     margin-bottom: 1rem;
     border-radius: 6px;
     box-shadow: 1px 1px 6px rgba(0,0,0,25%);
-    padding-bottom: 6px;
-    display:flexbox;
+    overflow:hidden;
+}
+
+.item .item-content{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.results div {
+.item-content div {
     text-align: center;
-    padding: .5rem;
+    padding: .7rem 1rem;
 }
-.results .rank{
+.item-content .rank, .item-content .score{
     min-width: 3ch;
-    background-color: rgba(0,0,0,5%);
+    background-color: rgba(0,0,0,8%);
 }
 
-.results .score::after{
+.item-content .score::after{
     content: "pts";
+}
+
+.item .line{
+    height: 6px;
+    width: 100%;
+}
+
+.item:nth-child(even) .line{
+    background-color: #22DBDB;
+
+}
+
+.item:nth-child(odd) .line{
+    background-color: #F5ED11;
+
+}
+
+
+/* .score::before{
+    content: "";
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    background-color: yellow;
+    height: 6px;
+    width: 100%
+} */
+
+@media screen and (min-width: 601px) {
+    .item{
+        width: calc(50vw + 300px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .item{
+        width: 100vw;
+        border-radius: 0;
+    }
 }
