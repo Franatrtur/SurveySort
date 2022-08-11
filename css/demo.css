@@ -1,0 +1,93 @@
+.flex {
+    display: flex;
+}
+
+.relative {
+    position: relative;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 6em 3em;
+
+    align-items: center;
+    height: 60vh;
+}
+
+.compare-card {
+    /* height: 100%; */
+    width: 35%;
+
+    position: relative;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    border-radius: 6px;
+
+    flex: 1;
+
+    align-self: stretch;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+
+    height: 3em;
+
+    padding: auto;
+
+    border-radius: 0px 0px 6px 6px;
+}
+
+.centered {
+    margin-top: 0.9em;
+}
+
+.prompt {
+    font-size: 2em;
+    padding: 1em;
+
+    flex: 0.5;
+
+    
+
+    margin: 0;
+
+    align-self: center;
+}
+
+@media screen and (min-width: 601px) {
+    .prompt {
+        max-width: 20vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-container {
+        flex-direction: column;
+        padding: 1em;
+        height: 85vh;
+    }
+
+    .compare-card {
+        width: 100%;
+        /* height: ; */
+    }
+
+    .prompt {
+        font-size: 1.3em;
+        flex-basis: auto;
+        flex-grow: 0;
+    }
+}

@@ -4,10 +4,63 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/demo.css">
 	<title>Document</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-	
+	<header>
+		<div class="header-left">
+			<div><img src="./img/globe.svg" alt="globe.svg"></div>
+			<div class="white_line"></div>
+			<div class="header-left" style="padding-right:1vw">
+				<img src="./img/explore.svg" alt="explore.svg">
+				<p>Explore</p>
+			</div>
+			<div class="white_line"></div>
+			<div class="header-left">
+				<img src="./img/settings.svg" alt="settings.svg">
+				<p>Account</p>
+			</div>
+
+		</div>
+		<div class="header-center">
+			<img src="./img/logo2.svg" alt="SS_logo.svg">
+			<p>Surveysort</p>
+		</div>
+		<div class="header-right">
+			<div id="accountButton"><img src="./img/person_icon.svg" alt="userIco.svg"><p>Guest</p></div>
+			<div id="loginButton"><p>Log in</p></div>
+		</div>
+	</header>
+
+	<div class="main-container">
+
+		<!-- <img src="img/loading.gif" alt="second image to compare" id="image2"> -->
+		<div class="compare-card" style='background-image: url("img/loading.gif")' id="image1" >
+			<div class="description">
+				<div class="centered" id="description1">
+					loading...
+				</div>
+			</div>
+		</div>
+
+		<p class="prompt">Which one do you find better?</p>
+
+		<div class="compare-card" style='background-image: url("img/loading.gif")' id="image2" >
+			<div class="description">
+				<div class="centered" id="description2">
+					loading...
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tools">
+		<img src="./img/change_mode_dark.svg" alt="ChangeMode.svg">
+		<img src="./img/share.svg" alt="Share.svg">
+	</div>
+
 </body>
 </html>
